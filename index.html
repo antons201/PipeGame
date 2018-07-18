@@ -3,6 +3,9 @@
     <title>Трубопровод</title>
     <link rel="stylesheet" type="text/css" href="style.css" >
     <meta charset="utf-8">
+    <script src="lib/jquery-3.3.1.min.js"></script>
+    <script src="lib/game.js"></script>
+    <script src="lib/ui.js"></script>
 </head>
 <body>
 <nav>
@@ -18,5 +21,10 @@
         </li>
     </ul>
 </nav>
+<table id="pipes"></table>
+<script>
+    init();
+    draw(pipes);
+</script>
 </body>
 </html>
