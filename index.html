@@ -9,18 +9,12 @@
     <script src="lib/ui.js"></script>
 
 </head>
-<body bgcolor="#7fffd4">
+<body onload="display_window(modal0)" bgcolor="#7fffd4">
 <nav>
     <ul class="topmenu">
         <li><input type="button" value="Играть" onclick="startGame()"></li>
         <li><input type="button" value="Заново" onclick="restart()"></li>
-        <li><input type="button" value="Выбор уровня" onclick="">
-            <ul class="submenu">
-                <li><input type="button" value="Уровень 1" onclick="selectLevel(1)"></li>
-                <li><input type="button" value="Уровень 2" onclick="selectLevel(2)"></li>
-                <li><input type="button" value="Уровень 3" onclick="selectLevel(3)"></li>
-            </ul>
-        </li>
+        <li><input type="button" value="Выбор уровня" onclick="display_window(modal2)"></li>
     </ul>
 </nav>
 
@@ -28,12 +22,26 @@
 <img class="image" src="img/pipe12.png"/>
 <table id="pipes"></table>
 <img class="image_two" src="img/pipe13.png">
-
-
-<div id="modal_form">
-    <span id="modal_close">X</span>
+<div id="modal0" class="modal_div">
+    <span class="modal_close">X</span>
+    <div id="start">
+        <input type="text" placeholder="Введите имя" value="">
+        <input class="close_window" type="button" value="Начать игру" onclick="startGame()">
+    </div>
+</div>
+<div id="modal1" class="modal_div">
+    <span class="modal_close">X</span>
     <div id="text">
         <p>Вы победили</p>
+    </div>
+</div>
+<div id="modal2" class="modal_div">
+    <span class="modal_close">X</span>
+    <div id="level">
+        <p>Выбор уровня</p>
+        <input class="close_window" type="button" value="Уровень 1" onclick="selectLevel(1)">
+        <input class="close_window" type="button" value="Уровень 2" onclick="selectLevel(2)">
+        <input class="close_window" type="button" value="Уровень 3" onclick="selectLevel(3)">
     </div>
 </div>
 <div id="overlay"></div>

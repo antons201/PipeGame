@@ -62,7 +62,7 @@ table {
     margin: auto;
 
 }
-#modal_form {
+.modal_div {
     width: 300px;
     height: 300px;
     border-radius: 5px;
@@ -78,7 +78,7 @@ table {
     z-index: 5;
     padding: 20px 10px;
 }
-#modal_form #modal_close {
+.modal_close {
     width: 21px;
     height: 21px;
     position: absolute;
