@@ -53,12 +53,14 @@ nav li:hover > .submenu {
     left: 100%;
     top: -1px;
 }
-table{
-    margin: auto;
-}
 .pipe{
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
+}
+table {
+
+    margin: auto;
+
 }
 #modal_form {
     width: 300px;
@@ -100,6 +102,20 @@ table{
     cursor:pointer;
     display:none;
 }
-#text{
+#text {
     margin: 150px auto auto 105px;
 }
+.image {
+    transform: translate(+605px, 0px)
+
+}
+
+.image_two {
+
+    transform: translate(+1350px, -90px)
+}
+
+.pipes {
+    margin-left: 600px;
+}
+
