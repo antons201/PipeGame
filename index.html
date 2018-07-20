@@ -12,9 +12,9 @@
 <body onload="display_window(modal0)" bgcolor="#7fffd4">
 <nav>
     <ul class="topmenu">
-        <li><input type="button" value="Играть" onclick="startGame()"></li>
-        <li><input type="button" value="Заново" onclick="restart()"></li>
-        <li><input type="button" value="Выбор уровня" onclick="display_window(modal2)"></li>
+        <li><input class="game_button" type="button" value="Играть" onclick="startGame()"></li>
+        <li><input class="game_button" type="button" value="Заново" onclick="restart()"></li>
+        <li><input class="game_button" type="button" value="Выбор уровня" onclick="display_window(modal2)"></li>
     </ul>
 </nav>
 
@@ -23,7 +23,6 @@
 <table id="pipes"></table>
 <img class="image_two" src="img/pipe13.png">
 <div id="modal0" class="modal_div">
-    <span class="modal_close">X</span>
     <div id="start">
         <input type="text" placeholder="Введите имя" value="">
         <input class="close_window" type="button" value="Начать игру" onclick="startGame()">
