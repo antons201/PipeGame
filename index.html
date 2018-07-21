@@ -3,7 +3,21 @@
     <title>Pipe game</title>
     <link rel="stylesheet" type="text/css" href="style.css" >
     <meta charset="utf-8">
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDybL183h0mBkJAJDgYVhNcfbS1UCMYcK0",
+            authDomain: "pipe-game-2f7d0.firebaseapp.com",
+            databaseURL: "https://pipe-game-2f7d0.firebaseio.com",
+            projectId: "pipe-game-2f7d0",
+            storageBucket: "pipe-game-2f7d0.appspot.com",
+            messagingSenderId: "291982527845"
+        };
+        firebase.initializeApp(config);
+    </script>
     <script src="lib/jquery-3.3.1.min.js"></script>
+    <script src="lib/auth.js"></script>
     <script src="lib/generator.js"></script>
     <script src="lib/game.js"></script>
     <script src="lib/ui.js"></script>
@@ -19,27 +33,41 @@
 </nav>
 
 
+<div id="timer">
+    <p id="Time"></p>
+</div>
 <table id="pipes"></table>
-
 <div id="modal0" class="modal_div">
     <div id="start">
-        <input type="text" placeholder="Введите имя" value="">
-        <input class="close_window" type="button" value="Начать игру" onclick="startGame()">
+        <p>Введите email</p>
+        <input id="email" type="text" placeholder="example@mail.ru" value="">
+        <p>Введите пароль</p>
+        <input id="pass" id="registr" type="password" value="">
+        <input class="regform" type="button" value="Регистрация" onclick="registration()">
+        <input class="regform" type="button" value="Вход" onclick="signin()">
     </div>
 </div>
 <div id="modal1" class="modal_div">
     <span class="modal_close">X</span>
     <div id="text">
         <p>Вы победили</p>
+        <input class="close_window" type="button" value="Заново" onclick="restart()">
+        <input class="close_window" type="button" value="Следующий уровень" onclick="restart()">
     </div>
 </div>
 <div id="modal2" class="modal_div">
     <span class="modal_close">X</span>
     <div id="level">
         <p>Выбор уровня</p>
-        <input class="close_window" type="button" value="Уровень 1" onclick="selectLevel(1)">
-        <input class="close_window" type="button" value="Уровень 2" onclick="selectLevel(2)">
-        <input class="close_window" type="button" value="Уровень 3" onclick="selectLevel(3)">
+        <input class="levels" type="button" value="Уровень 1" onclick="selectLevel(1)">
+        <input class="levels" type="button" value="Уровень 2" onclick="selectLevel(2)">
+        <input class="levels" type="button" value="Уровень 3" onclick="selectLevel(3)">
+    </div>
+</div>
+<div id="modal3" class="modal_div">
+    <div id="loose">
+        <p>Вы проиграли</p>
+        <input class="close_window" type="button" value="Заново" onclick="restart()">
     </div>
 </div>
 <div id="overlay"></div>

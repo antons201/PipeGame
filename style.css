@@ -105,19 +105,9 @@ table {
 #text {
     margin: 150px auto auto 105px;
 }
-.image {
-    transform: translate(+605px, 0px);
-    visibility: hidden;
-}
-
-.image_two {
-    transform: translate(+1350px, -90px);
-    visibility: hidden;
-}
-
 .pipes {
     margin-left: 600px;
 }
-.game_button{
-    visibility: hidden;
+.levels:hover{
+    color: #5ee041;
 }
