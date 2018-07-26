@@ -25,7 +25,7 @@
     <script src="lib/ui.js"></script>
 
 </head>
-<body onload="display_window(modal01)" bgcolor="#7fffd4">
+<body onload="display_window(modal0)" bgcolor="#7fffd4">
 <nav>
     <ul class="topmenu">
         <li><input class="game_button" type="button" value="Тренировка" onclick="display_window(modal2)"></li>
@@ -45,26 +45,10 @@
 <table id="pipes"></table>
 <div id="modal0" class="modal_div">
     <div class="start">
-        <p id="regerr"></p>
-        <p>Введите email</p>
-        <input id="regemail" type="text" placeholder="example@mail.ru" value="">
-        <p>Введите пароль</p>
-        <input id="regpass" type="password" value="">
-        <div class="nic"><p>Введите никнейм</p>
-        <input id="name" type="text" placeholder="vasya" value=""></div>
-        <input id="reg" type="button" value="Зарегистрироваться" onclick="registration()">
-        <input id="back" type="button" value="Назад" onclick="back()">
-    </div>
-</div>
-<div id="modal01" class="modal_div">
-    <div class="start">
         <p id="entryerr"></p>
-        <p>Введите email</p>
-        <input id="entryemail" type="text" placeholder="example@mail.ru" value="">
-        <p>Введите пароль</p>
-        <input id="entrypass" type="password" value="">
-        <input id="registr" type="button" value="Регистрация" onclick="registr()">
-        <input id="regentry" type="button" value="Вход" onclick="signin()">
+        <div class="nic"><p>Введите никнейм</p>
+            <input id="name" type="text" placeholder="vasya" value=""></div>
+        <input id="regentry" type="button" value="Вход" onclick="writeUserData()">
     </div>
 </div>
 <div id="modal1" class="modal_div">
