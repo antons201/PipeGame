@@ -37,7 +37,7 @@
             </ul>
         </li>
         <li><input class="game_button" type="button" value="Заново" onclick="restart()"></li>
-        <li><input class="game_button" type="button" value="Рекорды" onclick="display_window(modal4)"></li>
+        <li><input class="game_button" type="button" value="Рекорды" onclick="showResults()"></li>
     </ul>
 </nav>
 
@@ -83,6 +83,8 @@
     <span class="modal_close">X</span>
     <div id="records">
         <p>Таблица рекордов</p>
+        <table id="h" class="board"></table>
+
     </div>
 </div>
 <div id="overlay"></div>
