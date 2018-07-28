@@ -29,7 +29,13 @@
 <nav>
     <ul class="topmenu">
         <li><input class="game_button" type="button" value="Тренировка" onclick="display_window(modal2)"></li>
-        <li><input class="game_button" type="button" value="Марафон" onclick="startGame()"></li>
+        <li><input class="game_button" type="button" value="Марафон" onclick="startGame()">
+            <ul class="submenu">
+                <li><input type="button" value="Легко" onclick="display_window(modal2)"></li>
+                <li><input type="button" value="Средне" onclick="display_window(modal2)"></li>
+                <li><input type="button" value="Сложно" onclick="display_window(modal2)"></li>
+            </ul>
+        </li>
         <li><input class="game_button" type="button" value="Заново" onclick="restart()"></li>
         <li><input class="game_button" type="button" value="Рекорды" onclick="display_window(modal4)"></li>
     </ul>
