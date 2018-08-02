@@ -149,9 +149,6 @@ input{
 }
 input:hover, input:active{
     border:2px solid #FF0000;
-    text-decoration:#FFFF00;
-    color: #FFFF00;
-
 }
 #timer{
     position: fixed;
@@ -162,12 +159,6 @@ input:hover, input:active{
     position: fixed;
     top: 24%;
     font-size: 20px;
-}
-#h{
-    border-spacing: 0;
-}
-.restable{
-    border: 1px solid black;
 }
 p {
     color: #C71585;
@@ -180,10 +171,11 @@ p {
 body {
     background-image: url(img/main.png);
 }
-.rec {
+#time, .text {
     color: black;
 }
-#time {
-    color: black;
+#authors{
+    position: fixed;
+    right: 5%;
+    bottom: 2%;
 }
-
