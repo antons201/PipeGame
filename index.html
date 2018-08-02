@@ -1,5 +1,6 @@
 <html>
 <head>
+    <link rel="shortcut icon" href="img/game_icon.png" type="image/png">
     <title>Pipe game</title>
     <link rel="stylesheet" type="text/css" href="style.css" >
     <meta charset="utf-8">
@@ -18,12 +19,10 @@
         var database = firebase.database();
     </script>
     <script src="lib/jquery-3.3.1.min.js"></script>
-    <script src="lib/auth.js"></script>
     <script src="lib/database.js"></script>
     <script src="lib/generator.js"></script>
     <script src="lib/game.js"></script>
     <script src="lib/ui.js"></script>
-
 </head>
 <body onload="display_window(modal0)" bgcolor="#7fffd4">
 <nav>
@@ -46,30 +45,30 @@
     <p id="Time"></p>
 </div>
 <div id="result">
-    <p>Score:<span id="score">0</span></p>
+    <p class="rec">Score:<span id="score">0</span></p>
 </div>
 <table id="pipes"></table>
 <div id="modal0" class="modal_div">
     <div class="start">
         <p id="entryerr"></p>
         <div class="nic"><p>Введите никнейм</p>
-            <input id="name" type="text" placeholder="vasya" value=""></div>
+            <input id="name" type="text" placeholder="Vasya" value=""></div>
         <input id="regentry" type="button" value="Вход" onclick="writeUserData()">
     </div>
 </div>
 <div id="modal1" class="modal_div">
-    <span class="modal_close">X</span>
+    <img src="img/cross.png" class="modal_close">
     <div id="text">
         <p>Вы победили</p>
         <input class="close_window" type="button" value="Следующий уровень" onclick="startGame()">
     </div>
 </div>
 <div id="modal2" class="modal_div">
-    <span class="modal_close">X</span>
+    <img src="img/cross.png" class="modal_close">
     <div id="level">
         <p>Выбор уровня</p>
-        <input class="levels" type="button" value="Уровень 1" onclick="selectLevel(1)">
-        <input class="levels" type="button" value="Уровень 2" onclick="selectLevel(2)">
+        <input class="levels" type="button" value="Уровень 1" onclick="selectLevel(1)" >
+        <input class="levels" type="button" value="Уровень 2" onclick="selectLevel(2)" >
         <input class="levels" type="button" value="Уровень 3" onclick="selectLevel(3)">
     </div>
 </div>
@@ -80,7 +79,7 @@
     </div>
 </div>
 <div id="modal4" class="modal_div">
-    <span class="modal_close">X</span>
+    <img src="img/cross.png" class="modal_close">
     <div id="records">
         <p>Таблица рекордов</p>
         <table id="h" class="board"></table>
